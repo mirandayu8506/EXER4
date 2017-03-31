@@ -1,0 +1,203 @@
+//backgroundGray  rgb(240,240,240);
+//borderGray rgb(260,260,260);
+
+body {
+   background-color: //backgroundGray;
+}
+section {
+  margin-top: 70px;
+}
+
+.container {
+  max-width: 980px;
+}
+.nav-customized {
+  padding-top: 8px;
+  background-color: //backgroundGray;
+  > .container {
+    background-color: rgb(60, 60, 60);
+    padding-left: 0px;
+  }
+  ul > li {
+    &:nth-of-type(1), &:nth-of-type(2), &:nth-of-type(3), &:nth-of-type(4) {
+      background-color: white;
+    }
+    &:nth-of-type(5) {
+      background-color: rgb(210, 210, 210);
+    }
+    &:nth-of-type(6), &:nth-of-type(7) {
+      background-color: rgb(146, 146, 146);
+    }
+    &:nth-of-type(8), &:nth-of-type(9) {
+      background-color: rgb(90, 90, 90);
+    }
+    > .genre-with-line {
+      padding-left: 0px;
+      padding-right: 0px;
+      > div {
+        padding-left: 15px;
+        padding-right: 15px;
+        border-right-style: dotted;
+        border-right-width: 0.7px;
+      }
+    }
+    .reverse-color {
+      color: white;
+      border-right-color: white;
+      &:hover{
+        color:black;
+      }
+    }
+  } 
+}
+
+.inline {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+  h4 {
+    display: inline-block;
+    font-size: 1em;
+  }
+  span {
+    margin-top: 10px;
+    height: 1em;
+  }
+}
+
+.basic-block{
+	background-color: white;
+	border-style: solid;
+ 	border-width: 0.5px;
+ 	border-color: //borderGray;
+ 	height: 100%;
+}
+
+#main-unit {
+  @extend .basic-block;
+  > .row {
+   >.img {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      &:nth-of-type(1) {
+        padding-right: 0px;
+      }
+      &:nth-of-type(2) {
+        padding-left: 0px;
+      }
+    }
+    .col-md-4 .type-block {
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      color: white;
+      height: 100px;
+      padding-top: 20px;
+      &:nth-of-type(1) {
+        background-color: rgb(255, 0, 0);
+      }
+      &:nth-of-type(2) {
+        background-color: rgb(0, 0, 130);
+      }
+      &:nth-of-type(3) {
+        background-color: rgb(235, 100, 165);
+      }
+      &:nth-of-type(4) {
+        background-color: rgb(144, 198, 0);
+      }
+    }
+  }
+}
+
+#timeline > .row > .col-md-9 {
+  @extend .basic-block;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  border-right-width: 15px;
+  border-right-color: //backgroundGray;
+  .col-md-6 {
+    &:first-of-type {
+      padding-right: 0px;
+    }
+    h5 {
+      color: red;
+      font-weight: normal;
+    }
+    .top > {
+      h5 {
+        display: inline;
+      }
+      time {
+        float: right;
+      }
+    }
+  }
+}
+#timeline > .row > {
+  .col-md-9 .col-md-6 .inline {
+    h4 {
+      display: inline-block;
+      font-size: 1em;
+    }
+    span {
+      margin-top: 10px;
+      height: 1em;
+    }
+  }
+  .col-md-3 {
+    // inherit first
+
+    // try the nested coding
+
+    .inline {
+      h4 {
+        display: inline-block;
+        font-size: 1em;
+      }
+      span {
+        margin-top: 10px;
+        height: 1em;
+      }
+    }
+  }
+}
+
+#csr > .row > {
+  .left {
+    @extend .basic-block;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    height: 100%;
+    border-right-width: 15px;
+    border-right-color: //backgroundGray;
+    > h3 {
+      font-size: 1.3em;
+      color: green;
+      margin-top: 0px;
+    }
+    .inline {
+      justify-content: flex-end;
+    }
+  }
+  .right {
+    @extend .basic-block;
+    padding-bottom: 15px;
+    border-left-width: 15px;
+    border-left-color: rgb(240, 240, 240);
+    .col-md-6 > div > {
+      span {
+        color: red;
+      }
+      h6 {
+        display: inline-block;
+      }
+    }
+  }
+}
