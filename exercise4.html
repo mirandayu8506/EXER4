@@ -13,13 +13,21 @@
 </head>
 <body>
 	<!--Hint:Bootstrap - Components - Navbar -->
-	<nav class="nav-customized">
-		<div class="container">
-			<div class="navbar-header">
-	   			<div class="img-responsive" href="#"><img src="img/logo.png"></div>
-	   		</div>
-	   		<div class="collapse navbar-collapse navbar-fixed-top row"  id="uni-collapse">
-	    		<ul>
+	<nav class="nav-customized navbar-fixed-top navbar-left nav navbar-default">
+		 <div class="container-fliud">
+			  <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="img-responsive" href="#"><img src="img/logo.png"></a>
+    </div>
+		
+	   		<div class="collapse navbar-collapse "  id="uni-collapse">
+				  
+	    		<ul class="nav navbar-nav" >
 	        		<li class="text-uppercase"><a class="genre-with-line"><div>women</div></a></li>
 					<li class="text-uppercase"><a class="genre-with-line"><div>men</div></a></li>
 					<li class="text-uppercase"><a class="genre-with-line"><div>kids</div></a></li>
@@ -34,21 +42,23 @@
 	    </div>
 	</nav>
 
-	<section class="row" id="main-unit">
+	<section class="container" id="main-unit">
+		
 		<div class="img col-md-4"><img src="img/liberty01.png"></div>
 		<div class="img col-md-4"><img src="img/liberty02.png"></div>
-		<div class="row">
-			<div class="type-block"><h4 class="text-center">women</h4><span></span></div>
-			<div class="type-block"><h4 class="text-center">men</h4><span></span></div>
-			<div class="type-block"><h4 class="text-center">girls</h4><span ></span></div>
-			<div class="type-block"><h4 class="text-center">baby</h4><span ></span></div>
+		<div class="col-md-4 row">
+			<div class="col-md-3 type-block"><h4 class="text-center">women</h4><span></span></div>
+			<div class="col-md-3 type-block"><h4 class="text-center">men</h4><span></span></div>
+			<div class="col-md-3 type-block"><h4 class="text-center">girls</h4><span ></span></div>
+			<div class="col-md-3 type-block"><h4 class="text-center">baby</h4><span ></span></div>
 		</div>
 		<div><img src="img/liberty03.png" class="img-responsive"></div>
+		</div>
 	</section>
-	<section id="timeline">
+	<section id="timeline" class="container">
 		<h1>Timeline</h1>
 		<h5>毎日をより豊かに、より快適に</h5>
-		<div>
+		<div class="col-md-9">
 			<img src="img/news01.png">
 			<div class="top">
 				<h5 class="">women's</h5>
@@ -75,7 +85,7 @@
 	
 			<div class="inline"><h4>ニュースをもっと見る</h4><span></span></div>
 		</div>
-		<div>
+		<div class="row">
 			<h1>LifeWear</h1>
 			<h4>spring summer 2016</h4>
 			<img src="img/lifewear01.png">
